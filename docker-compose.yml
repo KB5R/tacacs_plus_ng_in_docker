@@ -1,0 +1,9 @@
+services:
+  tacacs:
+    image: tacacs-ng:latest
+    container_name: tacacs-ng
+    restart: always
+    network_mode: host
+    volumes:
+      - ./volume:/opt/tac_plus-ng/etc
+      - ./logs:/var/log/tac_plus-ng
